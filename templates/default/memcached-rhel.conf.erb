@@ -1,0 +1,6 @@
+PORT="11211"
+USER="memcached"
+MAXCONN="<%= node['memcached']['port'] %>"
+CACHESIZE=<%= ((node['memory']['total'][0..-3]).to_i / 1024 * node['memcached']['memory_share']).to_i %>
+OPTIONS=""
+
