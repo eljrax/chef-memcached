@@ -22,7 +22,6 @@ gem 'chef-zero'
 gem 'foodcritic'
 gem 'rspec'
 gem 'chefspec'
-<<<<<<< HEAD
 gem 'serverspec'
 gem 'specinfra'
 gem 'strainer'
@@ -33,6 +32,3 @@ gem 'guard-kitchen'
 gem 'guard-foodcritic', '>= 1.0'
 gem 'guard-rspec', '>= 4.2'
 gem 'knife-rackspace'
-=======
-gem 'strainer'
->>>>>>> parent of f3e2222... Platform independent testing
