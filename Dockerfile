@@ -3,7 +3,7 @@
 # VERSION               0.0.1
 
 FROM     ubuntu 
-MAINTAINER Amos Folarin "amosfolarin@gmail.com"
+MAINTAINER Erik Ljungstrom "erik.ljungstrom@rackspace[-dot=]co.uk"
 
 # make sure the package repository is up to date (main is already listed by default)
 RUN echo "deb http://archive.ubuntu.com/ubuntu precise main universe" > /etc/apt/sources.list

@@ -26,6 +26,8 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
 	
   config.vm.define "ubuntu_docker", primary: false, autostart: false do |ubuntu|
   # Ubuntu Docker container...
+    ubuntu.ssh.password='t00r'
+    ubuntu.ssh.username='root'
     ubuntu.vm.provider "docker" do |d|
       d.build_dir = "."
       d.has_ssh = true
