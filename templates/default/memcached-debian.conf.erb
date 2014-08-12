@@ -18,7 +18,7 @@ logfile /var/log/memcached.log
 -m <%= ((node['memory']['total'][0..-3]).to_i / 1024 * node['memcached']['memory_share']).to_i %>
 
 # Default connection port is 11211
--p 11211 
+-p <%= node['memcached']['port'] %> 
 
 # Run the daemon as root. The start-memcached will default to running as root if no
 # -u command is present in this config file

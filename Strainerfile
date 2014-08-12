@@ -1,5 +1,4 @@
 knife test: bundle exec knife cookbook test $COOKBOOK
 foodcritic: bundle exec foodcritic -f any $COOKBOOK
-# /dev/null because it seems rspec enables -w by default, and ruby is broken
-rspec: bundle exec rspec 2>/dev/null  
+rspec: bundle exec rspec   
 kitchen: bundle exec kitchen verify
