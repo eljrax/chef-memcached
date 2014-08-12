@@ -1,0 +1,5 @@
+# Rubocop spuriously thinks I should do a next in spec/default_spec.rb
+# when this really isn't correct. Ignoring this test for now...
+
+Style/Next:
+  Enabled: false
