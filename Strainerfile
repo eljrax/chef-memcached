@@ -1,4 +1,5 @@
 knife test: bundle exec knife cookbook test $COOKBOOK
+rubocop: rubocop
 foodcritic: bundle exec foodcritic -f any $COOKBOOK
 rspec: bundle exec rspec   
 kitchen: bundle exec kitchen verify
