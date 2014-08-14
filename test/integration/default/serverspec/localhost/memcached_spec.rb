@@ -16,6 +16,10 @@ else
   end
 end
 
+describe comman('ps aux | egrep "[m]emcached.* -t 6"') do
+  it { should return_exit_status 0 }
+end
+
 describe service('memcached') do
   it { should be_enabled   }
   it { should be_running   }
