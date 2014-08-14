@@ -6,7 +6,7 @@ default['memcached']['debian']['config']['memcached.conf'] = {
     '#-v' => '',
     '-c' => '500',
     '-M' => '',
-
+    '-t' => '6'
 }
 
 # Populate with any custom config in k/v formati for RedHat platforms
