@@ -41,3 +41,7 @@ logfile /var/log/memcached.log
 # Maximize core file limit
 # -r
 
+<% node['memcached']['debian']['config']['memcached.conf'].each do |k,v| %>
+<%= "#{k} #{v}" %>  	
+<% end %>
+
