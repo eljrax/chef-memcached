@@ -3,6 +3,7 @@
 # VERSION               0.0.1
 
 FROM     ubuntu 
+# Based on Amos Folarin's sshd container
 MAINTAINER Erik Ljungstrom "erik.ljungstrom@rackspace[-dot=]co.uk"
 
 # make sure the package repository is up to date (main is already listed by default)
