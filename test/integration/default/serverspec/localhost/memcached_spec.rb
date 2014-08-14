@@ -16,7 +16,7 @@ else
   end
 end
 
-describe comman('ps aux | egrep "[m]emcached.* -t 6"') do
+describe command('ps aux | egrep "[m]emcached.* -t 6"') do
   it { should return_exit_status 0 }
 end
 
