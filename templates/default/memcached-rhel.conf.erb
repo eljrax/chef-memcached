@@ -3,4 +3,7 @@ USER="memcached"
 MAXCONN=1000
 CACHESIZE=<%= ((node['memory']['total'][0..-3]).to_i / 1024 * node['memcached']['memory_share']).to_i %>
 OPTIONS=""
+<% node['memcached']['rhel']['config']['memcached.conf'].each do |k,v| %>
+<%= "#{k}#{v}" %>      
+<% end %>
 

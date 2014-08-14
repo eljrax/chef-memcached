@@ -29,9 +29,19 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
     ubuntu.ssh.password='t00r'
     ubuntu.ssh.username='root'
     ubuntu.vm.provider "docker" do |d|
-      d.build_dir = "."
+      d.build_dir = "docker.ubuntu/"
       d.has_ssh = true
       d.vagrant_machine = "ubuntu"
+    end
+  end
+
+  config.vm.define "centos_docker", primary: false, autostart: false do |cd|
+    cd.ssh.password='t00r'
+    cd.ssh.username='root'
+    cd.vm.provider "docker" do |dc|
+      dc.build_dir="docker.centos/"
+      dc.has_ssh = true
+      dc.vagrant_machine = "centos"
     end
   end
 
