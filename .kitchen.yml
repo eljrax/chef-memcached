@@ -4,12 +4,28 @@ driver:
 
 driver_config:
   require_chef_omnibus: true
+
 provisioner:
   name: chef_solo
 
 platforms:
+  # Docker containers
+  - name: ubuntu_docker
+    driver:
+      dockerdir: docker.ubuntu/  
+      vagrantfile_erb: Vagrantfile.kitchen.erb
+      customize:
+        name: ubuntu_docker
+  - name: centos_docker
+    driver:
+      dockerdir: docker.centos/
+      vagrantfile_erb: Vagrantfile.kitchen.erb
+      customize:
+        name: centos_docker
+  # Virtualbox boxes        
   - name: ubuntu-14.04
   - name: centos-6.4
+
 
 suites:
   - name: default

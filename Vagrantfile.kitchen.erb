@@ -1,0 +1,21 @@
+# -*- mode: ruby -*-
+# vi: set ft=ruby :
+
+VAGRANTFILE_API_VERSION = "2"
+
+Vagrant.require_version ">= 1.5.0"
+
+Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
+
+  config.vm.define "<%= config[:customize][:name] %>", primary: false, autostart: true do |cd|
+    cd.ssh.password='t00r'
+    cd.ssh.username='root'
+    cd.vm.provider "docker" do |dc|
+      dc.build_dir="<%= config[:kitchen_root] %>/<%= config[:dockerdir]%>/"
+      dc.has_ssh = true
+      dc.vagrant_machine = "centos"
+    end
+  end
+
+end
+
