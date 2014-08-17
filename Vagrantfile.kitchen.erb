@@ -13,7 +13,6 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
     cd.vm.provider "docker" do |dc|
       dc.build_dir="<%= config[:kitchen_root] %>/<%= config[:dockerdir]%>/"
       dc.has_ssh = true
-      dc.vagrant_machine = "centos"
     end
   end
 
