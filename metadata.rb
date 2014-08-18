@@ -1,3 +1,5 @@
+# encoding: utf-8
+
 name 'memcached'
 maintainer 'Rackspace Ltd.'
 maintainer_email 'erik.ljungstrom[--at-]rackspace.co[=dot=]uk'

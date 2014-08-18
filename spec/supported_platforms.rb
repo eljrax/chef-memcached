@@ -1,3 +1,4 @@
+# encoding: utf-8
 def memcached_test_platforms
   {
     'ubuntu' => '14.04',
