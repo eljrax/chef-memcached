@@ -16,6 +16,9 @@ Gemfile.lock
 bin/*
 .bundle/*
 
+# Rspec
+.coverage
+
 .kitchen/
 .kitchen.local.yml
 
