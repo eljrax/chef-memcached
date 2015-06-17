@@ -5,7 +5,7 @@ describe package('memcached') do
   it { should be_installed }
 end
 
-if os[:family] == 'RedHat'
+if os[:family] == 'redhat'
   describe file('/etc/sysconfig/memcached') do
     it { should be_file }
     its(:content) { should match(/PORT="11212"/) }
@@ -18,7 +18,7 @@ else
 end
 
 describe command('ps aux | egrep "[m]emcached.* -t 6"') do
-  it { should return_exit_status 0 }
+    its(:exit_status) { should eq 0 }
 end
 
 describe service('memcached') do
